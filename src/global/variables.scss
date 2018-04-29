@@ -1,0 +1,23 @@
+/*
+* Add all colors to this map.
+* Acccess the colors by using map-get like this: map-get($colors, primary)
+*/
+$neonRed: #f34a4a;
+$neonRedRgb: rgba(243,74,74, 1);
+$slate: #262F34;
+$slateRgb: rgba(38,47,52, 1);
+$crepe: #F1D3BC;
+$crepeRgb: rgba(241,211,188, 1);
+$darkChocolate: #615049;
+$darkChocolateRgb: rgba(97,80,73, 1);
+
+$colors: (
+  primary: $slate,
+  secondary: $neonRed,
+  light: $crepe,
+  dark: $darkChocolate
+);
+
+$maxWidth: 1024px;
+$mediumWidth: 780px;
+$smallWidth: 630px;

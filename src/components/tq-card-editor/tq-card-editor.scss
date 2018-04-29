@@ -1,0 +1,43 @@
+@import '../../global/variables';
+
+:host {
+  display: block;
+}
+
+tq-card-editor {
+  .ql-editor {
+    min-height: 400px;
+  }
+
+  > div > a {
+    background: white;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.3);
+    margin: 8px;
+    text-decoration: none;
+    color: inherit;
+    max-width: 50%;
+  }
+
+  .header, .content {
+    padding: 0 16px 16px 16px;
+    p {
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+  }
+
+  .image {
+    padding: 16px;
+    > * {
+      margin-bottom: 8px;
+    }
+  }
+  
+  @media only screen and (max-width: $smallWidth) {
+    max-width: 100%;
+    > div > a {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

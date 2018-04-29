@@ -1,0 +1,119 @@
+@import '../../global/variables';
+
+:host {
+  display: block;
+}
+
+tq-menu {
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    margin-right: 20px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+  }
+  ion-button {
+    display: none;
+  }
+
+  @media only screen and (min-width: $mediumWidth+1) {
+    .button.toggle-menu {
+      display:none;
+    }
+  }
+  @media only screen and (max-width: $mediumWidth) {
+    .button.toggle-menu {
+      font-size: 30px;
+    }
+
+    ul {
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      top: 47px;
+      height: 0;
+      background: #262F34;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+      transition: height,padding 200ms ease-out;
+      li {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 80px;
+        margin: 0;
+      }
+      li:last-child {
+        margin-right: 20px;
+      }
+    }
+    ul.visible {
+      display: flex;
+      padding: 16px;
+      height: 100px;
+    }
+    
+    a:hover::after, a.link-active:after {
+      width: 0!important;
+    }
+  }
+  
+  a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    margin: auto;
+    transition: width .1s;
+  }
+
+  a:hover::after, a.link-active:after {
+    width: 100%;
+  }
+
+  .toggle-menu {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    i {
+      height: 2px;
+      width: 20px;
+      background: white;
+      margin: 3px 0;
+      transition: all 200ms ease-out;
+    }
+    &[aria-open=true] {
+      i:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: 20% 200%;
+      }
+      i:nth-child(2) {
+        display: none;
+      }
+      i:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 33% 0%;
+      }
+      i{
+        transform-origin: center;
+      }
+    }
+  }
+}

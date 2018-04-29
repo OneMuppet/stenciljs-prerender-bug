@@ -1,0 +1,42 @@
+@import '../../global/variables';
+
+:host {
+  display: block;
+}
+
+tq-tagline {
+  h1 {
+    font-weight: 100;
+  }
+  .tagline {
+    display: flex;
+    background: rgba(0,0,0,0.5);    
+    padding: 0;
+    margin: 0;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    position: relative;
+    padding: 16px;
+  }
+  .tagline::after {
+    content: "";
+    background-image: url('../../assets/images/people.jpg');
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+  }
+  @media only screen and (max-width: $smallWidth) {
+    .tagline {
+      height: 50px;
+      h1 {
+        font-size: 19px;
+      }
+    }
+  }
+}

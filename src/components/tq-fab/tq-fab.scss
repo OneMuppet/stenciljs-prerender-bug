@@ -1,0 +1,44 @@
+@import '../../global/variables';
+:host {
+  display: block
+}
+
+tq-fab {
+  .fab {
+    opacity: 0;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    background: #f34a4a;
+    transform: rotate(0deg);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    bottom: -11px;
+    right: 0;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      opacity: .7;
+      height: 50px;
+      width: 50px;
+    }
+    &.always-on {
+      position: fixed;
+      opacity: .7;
+      left: 8px;
+      bottom: 8px;
+      height: 42px;
+      width: 42px;
+    }
+    img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}

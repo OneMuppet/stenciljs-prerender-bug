@@ -1,0 +1,15 @@
+:host {
+  display: block
+}
+
+tq-textarea {
+  display: block;
+  textarea {
+    padding: 0;
+    width: 100%;
+    min-height: 150px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    border-color: rgba(0,0,0,0.1);
+  }
+}
